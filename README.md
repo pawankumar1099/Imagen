@@ -10,7 +10,8 @@ A full-stack web application that leverages AI to generate stunning images. User
 
 ---
 
-![alt text](image.png)
+<img width="3817" height="1861" alt="diagram-export-30-12-2025-11_11_52-am" src="https://github.com/user-attachments/assets/872f52ba-c44b-40f9-9abb-8634a8d08238" />
+
 
 ---
 
