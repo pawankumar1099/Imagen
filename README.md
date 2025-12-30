@@ -10,6 +10,10 @@ A full-stack web application that leverages AI to generate stunning images. User
 
 ---
 
+![alt text](image.png)
+
+---
+
 ## ✨ Features
 
 - 🔐 **User Authentication** - Secure login and registration with JWT tokens
