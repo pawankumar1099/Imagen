@@ -1,358 +1,297 @@
-📸 Imagen
+# 🎨 Imagen - AI Image Generation Platform
 
-Imagen is a full-stack web application designed to generate, view, and manage AI-based image creation workflows.
-It includes a React client and a Node/Express server backend. The project aims to demonstrate an end-to-end modern web stack for AI/ML-powered image generation and storage.
+A full-stack web application that leverages AI to generate stunning images. Users can authenticate, manage credits, and generate high-quality images powered by advanced AI models.
 
-⚠️ Currently there’s no description in the original repo — this README is generated and may need adjustments for exact project behavior. 
-GitHub
-
-🚀 Features
-
-✅ Modern React frontend (UI for interacting with image generation)
-✅ RESTful Node.js backend (API, storage, job handling)
-✅ Separation of concerns: clear client/server architecture
-✅ Easy to install and run locally or in production
-
-(Note: Add or remove features here once actual code specifics are known.) 
-GitHub
-
-📁 Repository Structure
-Imagen/
-├── client/                  # Frontend React application
-├── server/                  # Backend API + services
-├── .gitignore
-├── package.json             # Root project config
-└── README.md                # Project documentation
-
-🧠 Tech Stack
-Layer	Technology
-Frontend	React (JavaScript)
-Backend	Node.js + Express
-APIs	REST
-Styling	CSS / UI framework
-Data	(Optional) Local JSON / Database
-Deployment	Vercel, Netlify, Heroku, Render etc.
-
-(Based on common patterns for client/server folders.) 
-GitHub
-
-💻 Getting Started — Local Setup
-🧩 Prerequisites
-
-Make sure you have installed:
-
-Node.js (≥14.x)
-
-npm or yarn
-
-Git
-
-🧰 1. Clone the Repository
-git clone https://github.com/pawankumar1099/Imagen.git
-cd Imagen
-
-📦 2. Install Dependencies
-🟢 Backend
-cd server
-npm install
-
-🔵 Frontend
-cd ../client
-npm install
-
-▶️ 3. Run Development Servers
-🛠 Backend
-cd server
-npm start
-
-
-Your API will usually run at:
-
-http://localhost:5000
-
-🌐 Frontend
-cd client
-npm start
-
-
-Your app should start at:
-
-http://localhost:3000
-
-🧪 Usage
-
-Open the frontend in your browser at http://localhost:3000
-
-Interact with the UI — generate or view images
-
-API requests will be handled by the backend at http://localhost:5000
-
-(Exact UI routes and API endpoints will depend on the code in /client and /server.) 
-GitHub
-
-📦 Scripts
-
-From the project root, you may have convenience scripts (if configured in package.json):
-
-Command	Purpose
-npm install	Installs all dependencies
-npm run dev	Runs both client and server together
-npm run build	Builds production frontend
-
-(Add actual scripts from the root package.json once available.) 
-GitHub
-
-📡 Environment Variables
-
-Create a .env file for:
-
-PORT=5000
-API_KEY=your-api-key
-DATABASE_URL=your-db-conn
-
-
-(Add required variables based on actual server and client configuration.)
-
-📘 API Endpoints
-Route	Method	Description
-/api/images	GET	List generated images
-/api/generate	POST	Generate a new image
-/api/users	GET/POST	User information
-
-(These are suggested — update based on actual backend routes.)
-
-🧩 Contributing
-
-We ❤️ contributions! To get started:
-
-Fork the repo
-
-Create your feature branch (git checkout -b feature/xyz)
-
-Commit your changes
-
-Push to your fork
-
-Create a PR explaining your changes
-
-🛡 License
-
-This project is currently unlicensed / unspecified — you can add a license such as MIT:
-
-MIT License
-
-
-(Add or update according to your choice.)
-
-📞 Contact
-
-For questions, issues, or suggestions:
-
-📧 Email: your-email@example.com
-
-💡 GitHub: https://github.com/pawankumar1099/Imagen
- 
-GitHub
-
-Would you like this in Hinglish as well (the way you prefer)?
-
-give me ready to paste for read.md and include the repo structure of client, server also
-
-Below is a READY-TO-PASTE README.md for your Imagen repository.
-You can directly copy-paste this into README.md without any changes.
-It includes detailed client & server folder structure, setup, and usage.
-
-# 📸 Imagen
-
-Imagen is a **full-stack web application** built to generate, manage, and display images using a modern client–server architecture.  
-The project follows clean separation between **frontend (client)** and **backend (server)**, making it scalable and easy to maintain.
-
-This repository is ideal for:
-- Learning full-stack development
-- Hackathon submissions
-- AI / image-based projects
-- MERN-style architecture practice
+![React](https://img.shields.io/badge/React-19.1.0-61dafb?logo=react)
+![Vite](https://img.shields.io/badge/Vite-7.0.4-646cff?logo=vite)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green?logo=nodedotjs)
+![MongoDB](https://img.shields.io/badge/MongoDB-8.17.2-47a248?logo=mongodb)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.12-38b2ac?logo=tailwindcss)
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🔥 Modern React frontend
-- ⚙️ Node.js + Express backend
-- 🌐 REST API architecture
-- 🧩 Clean folder structure
-- 🔐 Environment variable support
-- 🚀 Ready for deployment
-
----
-
-## 🧠 Tech Stack
-
-### Frontend
-- React
-- JavaScript
-- CSS / Tailwind (if used)
-
-### Backend
-- Node.js
-- Express.js
-- REST APIs
-
-### Tools
-- Git & GitHub
-- npm
-- dotenv
+- 🔐 **User Authentication** - Secure login and registration with JWT tokens
+- 🎬 **AI Image Generation** - Generate images using advanced AI models
+- 💳 **Credit System** - Purchase and manage credits for image generation
+- 💰 **Payment Integration** - Razorpay payment gateway for credit purchases
+- 📊 **Transaction History** - Track all image generation and purchase transactions
+- 🎨 **Beautiful UI** - Modern, responsive design with TailwindCSS
+- ⚡ **Fast Performance** - Built with Vite for optimized build and HMR
+- 🔄 **Real-time Updates** - Toast notifications for user feedback
 
 ---
 
-## 📁 Project Structure
+## 🏗️ Project Structure
 
-
-
-Imagen/
+```
+imagen/
+├── client/                 # React Frontend
+│   ├── src/
+│   │   ├── components/    # Reusable React components
+│   │   │   ├── Description.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── GenerateBtn.jsx
+│   │   │   ├── Head.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Prism.jsx
+│   │   │   ├── Steps.jsx
+│   │   │   └── Testimonial.jsx
+│   │   ├── contexts/      # React Context for state management
+│   │   │   └── AppContext.jsx
+│   │   ├── pages/         # Page components
+│   │   │   ├── Home.jsx
+│   │   │   ├── Result.jsx
+│   │   │   └── BuyCredit.jsx
+│   │   ├── assets/        # Static assets
+│   │   ├── App.jsx        # Root component
+│   │   ├── main.jsx       # Entry point
+│   │   └── index.css      # Global styles
+│   ├── package.json
+│   ├── vite.config.js
+│   └── eslint.config.js
 │
-├── client/ # Frontend (React App)
-│ ├── public/
-│ │ └── index.html
-│ │
-│ ├── src/
-│ │ ├── assets/ # Images, icons, fonts
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # Page-level components
-│ │ ├── services/ # API calls (axios/fetch)
-│ │ ├── styles/ # CSS / Tailwind files
-│ │ ├── App.js
-│ │ └── index.js
-│ │
-│ ├── package.json
-│ └── README.md
-│
-├── server/ # Backend (Node + Express)
-│ ├── controllers/ # Request logic
-│ ├── routes/ # API routes
-│ ├── models/ # DB schemas / models
-│ ├── middlewares/ # Auth, validation, etc.
-│ ├── utils/ # Helper functions
-│ ├── config/ # DB / env config
-│ ├── index.js # Entry point
-│ └── package.json
-│
-├── .gitignore
-├── package.json # Root config (optional)
-└── README.md
-
+└── server/                # Node.js/Express Backend
+    ├── config/
+    │   └── mongodb.js     # MongoDB connection
+    ├── controllers/       # Business logic
+    │   ├── userController.js
+    │   └── imageController.js
+    ├── middlewares/       # Authentication middleware
+    │   └── auth.js
+    ├── models/           # Database schemas
+    │   ├── userModel.js
+    │   └── transactionModel.js
+    ├── routes/           # API routes
+    │   ├── userRoutes.js
+    │   └── imageRoutes.js
+    ├── server.js         # Express app entry point
+    └── package.json
+```
 
 ---
 
-## 🧩 Prerequisites
+## 🚀 Getting Started
 
-Make sure you have installed:
+### Prerequisites
 
-- Node.js (v14+)
-- npm or yarn
-- Git
+- **Node.js** (v14 or higher)
+- **npm** or **yarn** package manager
+- **MongoDB** (local or cloud instance)
+- Create a `.env` file in the server directory with required environment variables
 
----
+### Installation
 
-## 🛠 Installation & Setup
+#### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd imagen
+```
 
-### 1️⃣ Clone the Repository
+#### 2. Setup Server
 
 ```bash
-git clone https://github.com/pawankumar1099/Imagen.git
-cd Imagen
-
-2️⃣ Backend Setup
 cd server
 npm install
+```
 
+**Create `.env` file in the server directory:**
+```env
+PORT=4000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+RAZORPAY_KEY_ID=your_razorpay_key
+RAZORPAY_KEY_SECRET=your_razorpay_secret
+# Add other required environment variables
+```
 
-Create a .env file inside server/:
+#### 3. Setup Client
 
-PORT=5000
-
-
-Start backend server:
-
-npm start
-
-
-Backend will run on:
-
-http://localhost:5000
-
-3️⃣ Frontend Setup
+```bash
 cd ../client
 npm install
+```
+
+---
+
+## 📝 Available Scripts
+
+### Server Commands
+
+```bash
+# Start the server
 npm start
+# Runs: node server.js
 
+# Start server with auto-reload (development)
+npm run dev
+# Runs: nodemon server.js
+```
 
-Frontend will run on:
+**Server runs on:** `http://localhost:4000`
 
-http://localhost:3000
+### Client Commands
 
-🔄 How It Works
+```bash
+# Start development server
+npm run dev
+# Runs: vite
 
-User interacts with the React frontend
+# Build for production
+npm run build
+# Runs: vite build
 
-Frontend sends requests to Express backend
+# Preview production build
+npm preview
+# Runs: vite preview
 
-Backend processes logic and returns response
+# Run ESLint
+npm run lint
+# Runs: eslint .
+```
 
-Frontend displays generated images or data
+**Client runs on:** `http://localhost:5173` (default Vite port)
 
-📡 API Structure (Sample)
-Method	Endpoint	Description
-GET	/api/images	Fetch images
-POST	/api/generate	Generate image
-GET	/api/health	Server status
+---
 
-(Update according to your implementation)
+## 🔌 API Endpoints
 
-📦 Scripts
-Client
-npm start      # Run frontend
-npm run build  # Build for production
+### User Routes (`/api/user`)
+- `POST /register` - Register a new user
+- `POST /login` - Login user
+- `GET /profile` - Get user profile (protected)
+- `POST /logout` - Logout user
 
-Server
-npm start      # Run backend
-npm run dev    # Nodemon (if configured)
+### Image Routes (`/api/image`)
+- `POST /generate` - Generate AI image (requires credits)
+- `GET /history` - Get user's image generation history (protected)
+- `DELETE /:id` - Delete a generated image
 
-🚀 Deployment
+---
 
-You can deploy:
+## 🛠️ Technology Stack
 
-Frontend: Vercel / Netlify
+### Frontend
+- **React 19** - UI library
+- **Vite 7** - Build tool and dev server
+- **TailwindCSS 4** - Utility-first CSS framework
+- **React Router 7** - Client-side routing
+- **Axios** - HTTP client
+- **React Toastify** - Toast notifications
+- **Motion** - Animation library
+- **OGL** - WebGL library
 
-Backend: Render / Railway / Heroku
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express 5** - Web framework
+- **MongoDB** - NoSQL database
+- **Mongoose 8** - MongoDB ODM
+- **JWT** - Authentication
+- **Bcrypt** - Password hashing
+- **Razorpay** - Payment processing
+- **Validator** - Input validation
+- **CORS** - Cross-origin requests
+- **Dotenv** - Environment variables
+- **Nodemon** - Development auto-reload
 
-Env Variables: Platform dashboard
+---
 
-🤝 Contributing
+## 🔐 Authentication
 
-Contributions are welcome!
+The application uses **JWT (JSON Web Tokens)** for secure authentication:
 
-Fork the repo
+1. User registers or logs in
+2. Server returns a JWT token
+3. Client stores the token (typically in localStorage)
+4. Token is sent in request headers for protected routes
+5. Server verifies token via auth middleware
 
-Create a feature branch
+---
 
-Commit changes
+## 💳 Payment Integration
 
-Open a Pull Request
+The project integrates **Razorpay** for handling credit purchases:
 
-🛡 License
+- Users can buy credits through the `/buy` route
+- Payments are processed securely via Razorpay API
+- Transaction history is maintained in the database
 
-This project is currently open for educational and personal use.
-Add an MIT License if required.
+---
 
-⭐ Support
+## 🌐 Environment Variables
 
-If you like this project:
+### Server `.env` Example
+```env
+PORT=4000
+MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/imagen
+JWT_SECRET=your_super_secret_jwt_key_12345
+RAZORPAY_KEY_ID=rzp_test_xxxxx
+RAZORPAY_KEY_SECRET=xxxxxx
+```
 
-⭐ Star the repo
+---
 
-🍴 Fork it
+## 📦 Deployment
 
-🧠 Learn from it
+### Client Deployment (Vercel, Netlify, etc.)
+```bash
+cd client
+npm run build
+# Deploy the dist folder
+```
 
-Happy Coding 🚀
+### Server Deployment (Heroku, Railway, Render, etc.)
+```bash
+cd server
+# Push to your hosting platform
+# Ensure environment variables are set in production
+```
+
+---
+
+## 🐛 Troubleshooting
+
+**Port Already in Use**
+```bash
+# Change port in server.js or .env
+PORT=5000 npm start
+```
+
+**MongoDB Connection Error**
+- Verify MongoDB URI in `.env`
+- Ensure MongoDB service is running
+- Check network access if using MongoDB Atlas
+
+**CORS Issues**
+- Verify CORS configuration in `server.js`
+- Ensure client and server URLs match
+
+---
+
+## 📄 License
+
+This project is licensed under the ISC License - see the LICENSE file for details.
+
+---
+
+## 👨‍💼 Author
+
+Created with ❤️ for AI-powered image generation enthusiasts.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+---
+
+## 📞 Support
+
+For support, open an issue on the repository or contact the development team.
+
+---
+
+**Made with ❤️ by Pawan Kumar**
